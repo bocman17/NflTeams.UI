@@ -1,0 +1,22 @@
+<div *ngIf="team">
+    <h2>{{team.name}}</h2>
+    <div>
+        City:
+        <input [(ngModel)]="team.city" placeholder="City"/>
+    </div>
+    <div>
+        Name:
+        <input [(ngModel)]="team.name" placeholder="Name"/>
+    </div>
+    <div>
+        Stadium:
+        <input [(ngModel)]="team.stadium" placeholder="Stadium"/>
+    </div>
+    <div>
+        Titles:
+        <input [(ngModel)]="team.titles" placeholder="Titles"/>
+    </div>
+    <button (click)="updateTeam(team)" *ngIf="team.id" >Save</button>
+    <button (click)="deleteTeam(team)" *ngIf="team.id" >Delete</button>
+    <button (click)="createTeam(team)" *ngIf="!team.id" >Create</button>
+</div>
