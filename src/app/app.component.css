@@ -1,5 +1,21 @@
-table, th, td {
-  border: 1px solid;
-  padding: 10px;
-  text-align: center;
+table {
+    width: 100%;
 }
+table th {
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+}
+table td {
+    text-align: center;
+}
+
+.create{
+    padding: 2rem;
+}
+
+.create button {
+    width: 20rem;
+    height: 5rem;
+}
+

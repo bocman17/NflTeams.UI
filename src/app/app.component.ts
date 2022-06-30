@@ -9,9 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'NflTeams.UI';
-
   teams: NflTeam[] = [];
   teamToEdit?: NflTeam;
+  columnsToDisplay = ['city', 'name', 'stadium', 'titles', 'button'];
 
   constructor(private nflTeamService: NflTeamService) {}
 

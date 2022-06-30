@@ -1,22 +1,53 @@
-<div *ngIf="team">
-    <h2>{{team.name}}</h2>
-    <div>
-        City:
-        <input [(ngModel)]="team.city" placeholder="City"/>
-    </div>
-    <div>
-        Name:
-        <input [(ngModel)]="team.name" placeholder="Name"/>
-    </div>
-    <div>
-        Stadium:
-        <input [(ngModel)]="team.stadium" placeholder="Stadium"/>
-    </div>
-    <div>
-        Titles:
-        <input [(ngModel)]="team.titles" placeholder="Titles"/>
-    </div>
-    <button (click)="updateTeam(team)" *ngIf="team.id" >Save</button>
-    <button (click)="deleteTeam(team)" *ngIf="team.id" >Delete</button>
-    <button (click)="createTeam(team)" *ngIf="!team.id" >Create</button>
-</div>
+<mat-card *ngIf="team">
+  <h2>{{ team.name }}</h2>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>City</mat-label>
+      <input matInput [(ngModel)]="team.city" />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="team.name" />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Stadium</mat-label>
+      <input matInput [(ngModel)]="team.stadium" />
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Titles</mat-label>
+      <input matInput [(ngModel)]="team.titles" />
+    </mat-form-field>
+  </div>
+  <div class="center">
+    <button
+      (click)="updateTeam(team)"
+      *ngIf="team.id"
+      mat-stroked-button
+      color="primary"
+    >
+      Save
+    </button>
+    <button
+      (click)="deleteTeam(team)"
+      *ngIf="team.id"
+      mat-stroked-button
+      color="warn"
+    >
+      Delete
+    </button>
+    <button
+      (click)="createTeam(team)"
+      *ngIf="!team.id"
+      mat-stroked-button
+      color="primary"
+    >
+      Create
+    </button>
+  </div>
+</mat-card>
